@@ -453,11 +453,16 @@ export default function MeetFlow() {
 
           {/* ── Tab 4: Common Availability ── */}
           <TabsContent value="common">
-            <div className="mb-5">
-              <h2 className="text-base font-semibold">共同空閒時間</h2>
-              <p className="text-sm text-muted-foreground mt-0.5">
-                所有 {members.length} 位成員都空閒的時段
-              </p>
+            <div className="mb-5 flex items-center justify-between">
+              <div>
+                <h2 className="text-base font-semibold">共同空閒時間</h2>
+                <p className="text-sm text-muted-foreground mt-0.5">
+                  所有 {members.length} 位成員都空閒的時段
+                </p>
+              </div>
+              <Button variant="outline" size="sm" onClick={() => alert("Detecting conflicts...")}>
+                偵測衝突
+              </Button>
             </div>
 
             <Card>
